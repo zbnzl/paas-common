@@ -7,6 +7,7 @@ package main
 
 import (
 	"github.com/zbnzl/paas-podApi/internal/biz"
+	"github.com/zbnzl/paas-podApi/internal/clients"
 	"github.com/zbnzl/paas-podApi/internal/conf"
 	"github.com/zbnzl/paas-podApi/internal/data"
 	"github.com/zbnzl/paas-podApi/internal/server"
@@ -19,5 +20,5 @@ import (
 
 // wireApp init kratos application.
 func wireApp(*conf.Server, *conf.Data, log.Logger) (*kratos.App, func(), error) {
-	panic(wire.Build(server.ProviderSet, data.ProviderSet, biz.ProviderSet, service.ProviderSet, newApp))
+	panic(wire.Build(clients.ProviderSet, server.ProviderSet, data.ProviderSet, biz.ProviderSet, service.ProviderSet, newApp))
 }
