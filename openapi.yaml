@@ -6,7 +6,6 @@ info:
     title: Greeter API
     description: The greeting service definition.
     version: 0.0.1
-    
 paths:
     /helloworld/{name}:
         get:
@@ -27,8 +26,6 @@ paths:
                         application/json:
                             schema:
                                 $ref: '#/components/schemas/helloworld.v1.HelloReply'
-    
-    
 components:
     schemas:
         helloworld.v1.HelloReply:
@@ -37,7 +34,5 @@ components:
                 message:
                     type: string
             description: The response message containing the greetings
-      
-
 tags:
     - name: Greeter
