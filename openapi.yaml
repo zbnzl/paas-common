@@ -28,6 +28,7 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/helloworld.v1.HelloReply'
     
+    
 components:
     schemas:
         helloworld.v1.HelloReply:
@@ -37,5 +38,6 @@ components:
                     type: string
             description: The response message containing the greetings
       
+
 tags:
     - name: Greeter
